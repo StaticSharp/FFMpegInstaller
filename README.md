@@ -1,10 +1,10 @@
 FFMpegInstaller
 ========================
-FFMpegInstaller is a set of nuget packages (FFMpegInstaller.*) for convenient usage of FFmpeg with C# based projects.
+FFMpegInstaller is a set of NuGet packages (FFMpegInstaller.*) for convenient usage of FFmpeg with C# based projects.
 
 Usage
 -----
-Install a nuget package, corresponding to a target platform (currently only FFMpegInstaller.Windows.x64 is abailable). When your project is built FFmpeg binaries will be copied to output folder. Absolute path for ffmpeg/ffprobe binaries can be read in runtime with `FFMpegInstaller.Discover.InstallationDirectory`
+Install a NuGet package, corresponding to a target platform (currently only FFMpegInstaller.Windows.x64 is abailable). When your project is built FFmpeg binaries will be copied to output folder. Absolute path for ffmpeg/ffprobe binaries can be read in runtime with `FFMpegInstaller.Discover.InstallationDirectory`
 
 Versioning
 ---------------
@@ -28,7 +28,7 @@ FFMpegInstaller packages provided as-is, we make no warranties as to performance
 
 GPL is not viral here
 ---------------------
-According to the [GPL FAQ][gplffaq-1], merely calling GPL'd executable from your program does not force you to adopt GPL for your code. Moreover, software installers [are not required][gplffaq-2] to do so either. This package is ultimately meant to be a Nuget-friendly installer for the ffmpeg.
+According to the [GPL FAQ][gplffaq-1], merely calling GPL'd executable from your program does not force you to adopt GPL for your code. Moreover, software installers [are not required][gplffaq-2] to do so either. This package is ultimately meant to be a NuGet-friendly installer for the ffmpeg.
 
 [mit]: https://opensource.org/license/mit/
 [gplffaq-1]: https://www.gnu.org/licenses/gpl-faq.en.html#MereAggregation
