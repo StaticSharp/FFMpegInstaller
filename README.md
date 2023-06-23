@@ -4,7 +4,7 @@ FFMpegInstaller is a set of NuGet packages (FFMpegInstaller.*) for convenient us
 
 Usage
 -----
-Install a NuGet package, corresponding to a target platform (currently only FFMpegInstaller.Windows.x64 is abailable). When your project is built FFmpeg binaries will be copied to output folder. Absolute path for ffmpeg/ffprobe binaries can be read in runtime with `FFMpegInstaller.Discover.InstallationDirectory`
+Install a NuGet package, corresponding to a target platform (currently only FFMpegInstaller.Windows.x64 is available). When your project is built FFmpeg binaries will be copied to output folder. Absolute path for ffmpeg/ffprobe binaries can be read in runtime with `FFMpegInstaller.Discover.InstallationDirectory`
 
 Versioning
 ---------------
@@ -20,7 +20,7 @@ FFmpeg is a trademark of Fabrice Bellard, originator of the FFmpeg project.
 
 FFmpeg official web site: https://ffmpeg.org/
 
-FFmpeg binaries provided had been downloaded from [gyan.dev][downloadpage] (as suggested on the FFmpeg official web site). Files provided by FFMpegInstaller contains only binaries, LICENSE, and README.txt out of FFmpeg build.
+FFmpeg binaries provided had been downloaded from [gyan.dev][downloadpage] (as suggested on the FFmpeg official web site). Files provided by FFMpegInstaller contains only binaries, LICENSE, and README.txt from FFmpeg build.
 
 FFmpeg might contain patented algorithms as mentioned on [FFmpeg legal page][legal]
 
@@ -28,7 +28,7 @@ FFMpegInstaller packages provided as-is, we make no warranties as to performance
 
 GPL is not viral here
 ---------------------
-According to the [GPL FAQ][gplffaq-1], merely calling GPL'd executable from your program does not force you to adopt GPL for your code. Moreover, software installers [are not required][gplffaq-2] to do so either. This package is ultimately meant to be a NuGet-friendly installer for the ffmpeg.
+According to the [GPL FAQ][gplffaq-1], merely calling GPL'd executable from your program does not force you to adopt GPL for your code. Moreover, software installers [are not required][gplffaq-2] to do so either. This package is ultimately meant to be a NuGet-friendly installer for the FFmpeg.
 
 [mit]: https://opensource.org/license/mit/
 [gplffaq-1]: https://www.gnu.org/licenses/gpl-faq.en.html#MereAggregation
