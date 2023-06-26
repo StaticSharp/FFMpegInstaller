@@ -22,11 +22,10 @@ jobs:
           export package_version="0.1.$((${{github.run_number}}-1))"
           echo "Package Version = $package_version"
           echo "package_version=$package_version" >> $GITHUB_ENV
-          sed -i 's/package_version_placeholder/$package_version/' FFMpegInstaller.Windows.x64.nuspec
-
       
       - name: Pack FFMpegInstaller.Windows.x64
         run: |
+          sed -i 's/package_version_placeholder/${{env.package_version}}/' FFMpegInstaller.Windows.x64.nuspec
           dotnet pack FFMpegInstaller.csproj \
           -p:NuspecFile=FFMpegInstaller.Windows.x64.nuspec \
           -p:NuspecBasePath="." \
