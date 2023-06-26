@@ -4,6 +4,7 @@
     <id>FFMpegInstaller.Windows.x64</id>
     <version>0.1.0</version>
     <license type="expression">MIT AND GPL-3.0-only</license>
+	<readme>README.md</readme>
     <authors>StaticSharp</authors>
     <description>Package Description</description>
     <dependencies>

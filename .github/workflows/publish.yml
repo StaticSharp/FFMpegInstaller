@@ -32,7 +32,7 @@ jobs:
           -o _out \
           -p:PackageId=FFMpegInstaller.Windows.x64 \
           -p:PackageVersion=${{env.package_version}} \
-          -c Release 
+          -c Release \
           -p:ContinuousIntegrationBuild=true \
           -p:PublishRepositoryUrl=true \
           -p:EmbedUntrackedSources=true \
