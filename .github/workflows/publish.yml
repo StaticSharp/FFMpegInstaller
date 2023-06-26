@@ -22,6 +22,7 @@ jobs:
           export package_version="0.1.$((${{github.run_number}}-1))"
           echo "Package Version = $package_version"
           echo "package_version=$package_version" >> $GITHUB_ENV
+          sed -i 's/package_version_placeholder/${{env.package_version}}/' FFMpegInstaller.Windows.x64.nuspec
 
       
       - name: Pack FFMpegInstaller.Windows.x64
@@ -30,8 +31,6 @@ jobs:
           -p:NuspecFile=FFMpegInstaller.Windows.x64.nuspec \
           -p:NuspecBasePath="." \
           -o _out \
-          -p:PackageId=FFMpegInstaller.Windows.x64 \
-          -p:PackageVersion=${{env.package_version}} \
           -c Release \
           -p:ContinuousIntegrationBuild=true \
           -p:PublishRepositoryUrl=true \

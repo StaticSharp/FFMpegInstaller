@@ -2,6 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>FFMpegInstaller.Windows.x64</id>
+    <version>package_version_placeholder</version>
     <license type="expression">MIT AND GPL-3.0-only</license>
 	<readme>README.md</readme>
     <authors>StaticSharp</authors>
