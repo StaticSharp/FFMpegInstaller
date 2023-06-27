@@ -10,9 +10,9 @@ Install the NuGet package corresponding to your target platform as a dependency 
 
 Upstream distributions
 ----------------------
-The FFMpegInstaller packages rebundle archives downloaded from https://github.com/BtbN/FFmpeg-Builds/releases (as suggested by the FFmpeg official website). To save users some internet traffic and disk space we only ship executables, libraries, LICENSE, and README.txt files from these archives. More specifically:
+The FFMpegInstaller packages rebundle archives downloaded from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) (as suggested by the FFmpeg official website). To save users some internet traffic and disk space we only ship executables, libraries, LICENSE, and README.txt files from these archives. More specifically:
 
-* FFMpegInstaller.Windows.x64 rebundles [`ffmpeg-6.0-full_build-shared.7z`](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2023-06-26-12-53/ffmpeg-n6.0-26-g3f345ebf21-win64-gpl-shared-6.0.zip)
+* FFMpegInstaller.Windows.x64 rebundles [`ffmpeg-6.0-full_build-shared.7z`](https://github.com/GyanD/codexffmpeg/releases/download/6.0/ffmpeg-6.0-full_build-shared.7z)
 
 Licenses & Legal matters
 ------------------------
@@ -32,3 +32,4 @@ According to the [GPL FAQ][gplffaq-1], merely calling GPL'd executable from your
 [legal]: https://ffmpeg.org/legal.html
 [gplffaq-1]: https://www.gnu.org/licenses/gpl-faq.en.html#MereAggregation
 [gplffaq-2]: https://www.gnu.org/licenses/gpl-faq.en.html#GPLCompatInstaller
+
