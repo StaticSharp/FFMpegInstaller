@@ -8,6 +8,18 @@ Usage
 -----
 Install the NuGet package corresponding to your target platform as a dependency to your project. This will configure the project's build process to copy the `ffmpeg` and `ffprobe` binaries (and all their libraries) into some place inside the build output directory. Your program can discover their exact location in runtime using `FFMpegInstaller.Discover.InstallationDirectory` property.
 
+Usage example
+-------------
+Many well-known dotnet libraries requires path to pre-installed FFmpeg. For example [FFMpegCore](https://www.nuget.org/packages/FFMpegCore/) may be used in tandem with FFMpegInstaller in the following way:
+```
+using FFMpegCore;
+
+GlobalFFOptions.Configure(options => options.BinaryFolder = FFMpegInstaller.Discover.InstallationDirectory);
+var mediaInfo = FFProbe.Analyse("<you video file name>");
+```
+
+When project is built FFmpeg binaries will be copied to `FFMpegInstaller.Discover.InstallationDirectory`, so FFMpegCore will be configured and ready.
+
 Upstream distributions
 ----------------------
 The FFMpegInstaller packages rebundle archives downloaded from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) (as suggested by the FFmpeg official website). To save users some internet traffic and disk space we only ship executables, libraries, LICENSE, and README.txt files from these archives. More specifically:
