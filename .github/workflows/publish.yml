@@ -25,16 +25,10 @@ jobs:
       
       - name: Pack FFMpegInstaller.Windows.x64
         run: |
-          sed -i 's/package_version_placeholder/${{env.package_version}}/' FFMpegInstaller.Windows.x64.nuspec
           dotnet pack FFMpegInstaller.csproj \
-          -p:NuspecFile=FFMpegInstaller.Windows.x64.nuspec \
-          -p:NuspecBasePath="." \
           -o _out \
           -c Release \
-          -p:ContinuousIntegrationBuild=true \
-          -p:PublishRepositoryUrl=true \
-          -p:EmbedUntrackedSources=true \
-          -p:DebugType=embedded
+          -p:PackageVersion=${{env.package_version}} \
           
       - name: Publish FFMpegInstaller.Windows.x64
         run: |
