@@ -12,13 +12,11 @@ Usage example
 -------------
 Many well-known dotnet libraries requires path to pre-installed FFmpeg. For example [FFMpegCore](https://www.nuget.org/packages/FFMpegCore/) may be used in tandem with FFMpegInstaller in the following way:
 ```
-using FFMpegCore;
-
-GlobalFFOptions.Configure(options => options.BinaryFolder = FFMpegInstaller.Discover.InstallationDirectory);
-var mediaInfo = FFProbe.Analyse("<you video file name>");
+FFMpegCore.GlobalFFOptions.Configure(options => options.BinaryFolder = FFMpegInstaller.InstallationDirectory);
+var mediaInfo = FFMpegCore.FFProbe.Analyse("<you video file name>");
 ```
 
-When project is built FFmpeg binaries will be copied to `FFMpegInstaller.Discover.InstallationDirectory`, so FFMpegCore will be configured and ready.
+When project is built FFmpeg binaries will be copied to `FFMpegInstaller.InstallationDirectory`, so FFMpegCore will be configured and ready.
 
 Upstream distributions
 ----------------------
@@ -28,7 +26,7 @@ The FFMpegInstaller packages rebundle archives downloaded from [gyan.dev](https:
 
 Licenses & Legal matters
 ------------------------
-The immediate code of FFMpegInstaller (`Discover.cs` et al.) is provided under the terms of the [MIT license][mit]. However, this license does not cover the bundled FFmpeg binaries which remain governed by GPL-3 (see the LICENSE file of the ffmpeg/ directory for more information).
+The immediate code of FFMpegInstaller (`FFMpegInstaller.cs` et al.) is provided under the terms of the [MIT license][mit]. However, this license does not cover the bundled FFmpeg binaries which remain governed by GPL-3 (see the LICENSE file of the ffmpeg/ directory for more information).
 
 The authors of FFMpegInstaller packages are not affiliated with, associated with, authorized by, endorsed by, sponsored by, or in any way officially connected with the FFmpeg project. The packages are provided as-is, with no warranties as to performance, merchantability, fitness for a particular purpose, or any other warranties whether expressed or implied.
 
